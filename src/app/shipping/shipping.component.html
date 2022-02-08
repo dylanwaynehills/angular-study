@@ -1,0 +1,8 @@
+<h3>Shipping Prices</h3>
+
+<p *ngIf="(shippingData | async) == null">loading..</p>
+<div class="cart-item" *ngFor="let shipping of shippingData | async">
+  <!-- {{ shipping.type }} -->
+  <span>{{ shipping.type }}</span>
+  <span>{{ shipping.price | currency }}</span>
+</div>
